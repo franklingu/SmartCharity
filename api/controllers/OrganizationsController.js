@@ -16,7 +16,6 @@ module.exports = {
   },
 
   findOne: function (req, res) {
-    console.log('find one');
     Organizations.find({id: req.params['id']}).exec(function (err, org) {
       if (err) {
         return res.json(err);

@@ -9,21 +9,25 @@ module.exports = {
 
   attributes: {
   	name: {
-  		type: 'string'
+  		type: 'string',
+      required: true
   	},
   	amountNeeded: {
-  		type: 'integer'
+  		type: 'integer',
+      required: true
   	},
-    // This is actually JSON formatted string
-    localtion: {
-      type: 'string'
+    description: {
+      type: 'text',
+      defaultsTo: 'No description provided'
     },
-    createdAt: {
-      type: 'datetime',
-      defaultsTo: new Date()
+    // This is actually JSON formatted string
+    location: {
+      type: 'string',
+      required: true
     },
     owner: {
-      model: 'organizations'
+      model: 'organizations',
+      required: true
     }
   }
 };
