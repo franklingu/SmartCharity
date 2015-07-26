@@ -18,7 +18,8 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'postgresqlServer'
+    // connection: 'postgresqlServer'
+    connection: 'HerokuPsqlServer'
   }
 
 };
