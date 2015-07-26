@@ -8,26 +8,27 @@
 module.exports = {
 
   attributes: {
-  	name: {
+    orgName: {
+      type: 'string'
+    },
+    orgImgName: {
+      type: 'string'
+    },
+  	donationTitle: {
   		type: 'string',
       required: true
   	},
-  	amountNeeded: {
+  	targetCollection: {
   		type: 'integer',
       required: true
   	},
-    description: {
+    achivedCollection: {
+      type: 'integer',
+      required: true
+    },
+    donationDesc: {
       type: 'text',
       defaultsTo: 'No description provided'
-    },
-    // This is actually JSON formatted string
-    location: {
-      type: 'string',
-      required: true
-    },
-    owner: {
-      model: 'organizations',
-      required: true
     }
   }
 };

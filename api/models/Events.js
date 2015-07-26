@@ -8,31 +8,40 @@
 module.exports = {
 
   attributes: {
-  	name: {
+    orgName: {
+      type: 'string'
+    },
+    orgImgName: {
+      type: 'string'
+    },
+  	eventTitle: {
   		type: 'string',
       required: true
   	},
-    description: {
+    eventDesc: {
       type: 'text',
       defaultsTo: 'No description provided'
     },
     // This is actually JSON formatted string
-    location: {
+    eventLocation: {
       type: 'string',
       required: true
     },
     numNeeded: {
       type: 'integer',
-      required: true,
-      defaultsTo: 0
+      defaultsTo: 10
+    },
+    numFriends: {
+      type: 'integer',
+      defaultsTo: 3
     },
     eventDate: {
-      type: 'datetime',
-      defaultsTo: new Date()
+      type: 'string',
+      defaultsTo: 'Nov 11'
     },
-    owner: {
-      model: 'organizations',
-      required: true
+    skills: {
+      type: 'string',
+      defaultsTo: 'IT support, Linux Admin'
     }
   }
 };
