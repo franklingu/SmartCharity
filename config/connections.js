@@ -80,7 +80,7 @@ module.exports.connections = {
     user: 'smart_charity',
     password: '',
     database: 'smart_charity'
-  }
+  },
 
 
   /***************************************************************************
@@ -88,5 +88,13 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
+
+  HerokuPsqlServer: {
+    adapter: 'sails-postgresql',
+    host: 'ec2-50-16-229-91.compute-1.amazonaws.com',
+    user: 'vqomswsqcnpezs',
+    password: '-Mvt-v4HUFsPj2hFiS7TxqDHGo',
+    database: 'da5ghpkf5q53de'
+  }
 
 };
